@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Sinh Viên</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        .form-group label {
+            display: inline-block;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quản Lý Sinh Viên</h1>
+    
+    <div class="form-group">
+        <label for="studentId">Mã sinh viên:</label>
+        <input type="text" id="studentId">
+    </div>
+    <div class="form-group">
+        <label for="fullName">Họ tên:</label>
+        <input type="text" id="fullName">
+    </div>
+    <div class="form-group">
+        <label for="gender">Giới tính:</label>
+        <select id="gender">
+            <option value="Nam">Nam</option>
+            <option value="Nữ">Nữ</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="dob">Ngày sinh:</label>
+        <input type="date" id="dob">
+    </div>
+    <div class="form-group">
+        <label for="hometown">Quê quán:</label>
+        <input type="text" id="hometown">
+    </div>
+    
+    <button onclick="addStudent()">Thêm sinh viên</button>
+    <button onclick="updateStudent()">Sửa sinh viên</button>
+
+    <h2>Danh sách sinh viên</h2>
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>Mã sinh viên</th>
+                <th>Họ tên</th>
+                <th>Giới tính</th>
+                <th>Ngày sinh</th>
+                <th>Quê quán</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
